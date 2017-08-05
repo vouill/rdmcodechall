@@ -1,5 +1,4 @@
 var stdin = process.openStdin();
-
 const fillMap = function () {
 const map = new Map();
     for (var i=32;i<128;++i) {
@@ -8,7 +7,6 @@ const map = new Map();
     return map
 }
  const renderMap = function (map) {
-    let i= 0;
     for (i=0 ;i<6; i++){
         let str = ''
         for(j=0; j<16; j++){
@@ -18,7 +16,6 @@ const map = new Map();
         console.log(str)
     }
 }
-
 const masterMap = fillMap();
 renderMap(masterMap);
 stdin.addListener("data", function(d) {
